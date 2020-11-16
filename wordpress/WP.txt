@@ -1,0 +1,67 @@
+# Installation
+Keep search engine visibility in mind
+
+Delete preset posts and pages
+Remove default themes and replace with your own
+Remove default plugins
+
+# .htaccess
+Remember to use https if the server has an SSL certificate and force the usage of it cause wordpress doesn't default to it
+https://github.com/phanan/htaccess
+	RewriteEngine on
+	RewriteCond %{HTTPS} !on
+	RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+Disable Directory Browsing
+	Options All -Indexes
+
+Block WordPress xmlrpc.php requests
+	<Files xmlrpc.php>
+	order deny,allow
+	deny from all
+	allow from 123.123.123.123
+	</Files>
+https://www.wpbeginner.com/plugins/how-to-disable-xml-rpc-in-wordpress/
+(Better to do in htaccess than with a filter. Blocks the function completely prevents loading instead of blocking afterwise.)
+
+# Theme -> functions.php
+Remove emojis
+Remove gutenberg block editor
+Remove post via email
+add_filter( 'enable_post_by_email_configuration', '__return_false', 100 );
+https://www.isitwp.com/remove-post-via-email-settings/
+
+# Options
+../wp-admin/options.php
+
+Writing
+	Disable discussions & comments
+	Disable email notifications "Email me whenever"
+	Avatars off
+
+Media
+	Organize my uploads = prettier image urls
+
+Permalinks
+	Post name or custom /%category%/%postname% <- category adds possible SEO scoring
+	Keep in mind a trailing slash on the URL will get rid of all URL parameters
+	Custom post type requires the permalink page to be saved again to reroute URLs again
+
+# Refrences & ideas
+https://codex.wordpress.org/Plugin_API/Action_Reference
+
+https://github.com/digitoimistodude/air-light
+
+https://handbook.dude.fi/
+
+gulp -> babel -> uglify
+
+Webp images
+
+No google fonts
+
+No icon libraries, only html entities
+
+Scripts and jQuery loaded in the footer
+
+Wp transient
