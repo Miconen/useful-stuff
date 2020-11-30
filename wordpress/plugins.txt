@@ -1,0 +1,4 @@
+Useful lightweight plugins to remember
+
+Disable Gutenberg by: Jeff Starr
+Disable Emojis (GDPR friendly) by: Ryan Hellyer
