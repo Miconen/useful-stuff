@@ -1,3 +1,4 @@
+<?php
 // Template language inclusive content
 add_action('template_redirect', function () {
     $currentLanguage = function_exists('pll_current_language') ? pll_current_language() : '';
