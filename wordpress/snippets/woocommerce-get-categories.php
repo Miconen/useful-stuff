@@ -1,6 +1,6 @@
 <?php
 if ( ! function_exists( 'woocommerce_sidebar_widgets' )) {
-    function superyellow_woocommerce_sidebar_widgets() {
+    function woocommerce_sidebar_widgets() {
         
         $args = array(
             'taxonomy'   => "product_cat"
