@@ -14,5 +14,5 @@ main()
 {
 	string input{};
 	removeSpaces(getline(cin, input));
-  return 0;
+	return 0;
 }
